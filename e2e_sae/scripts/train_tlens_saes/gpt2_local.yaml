@@ -1,4 +1,4 @@
-wandb_project: gpt2-layerwise_play
+wandb_project: koopman_sae
 wandb_run_name: null
 wandb_run_name_prefix: ""
 
@@ -25,7 +25,7 @@ loss:
   # Note that "original acts" below refers to the activations in a model without SAEs
   sparsity:
     p_norm: 1.0  # p value in Lp norm
-    coeff: 6.0  # Multiplies the Lp norm in the loss (sparsity coefficient)
+    coeff: 8e-4  # Multiplies the Lp norm in the loss (sparsity coefficient)
   in_to_orig: null  # Used for e2e+future recon. MSE between the input to the SAE and original acts
   out_to_orig: null  # Not commonly used. MSE between the output of the SAE and original acts
   out_to_in:
@@ -50,5 +50,5 @@ saes:
   retrain_saes: false  # Determines whether to continue training the SAEs in pretrained_sae_paths
   pretrained_sae_paths: null  # Path or paths to pretrained SAEs
   sae_positions:  # Position or positions to place SAEs in the model
-    - blocks.6.hook_resid_pre
-  dict_size_to_input_ratio: 60.0  # Size of the dictionary relative to the activations at the SAE positions
+    - blocks.7.hook_resid_pre
+  dict_size_to_input_ratio: 32.0  # Size of the dictionary relative to the activations at the SAE positions

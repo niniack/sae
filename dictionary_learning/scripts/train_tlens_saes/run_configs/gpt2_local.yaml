@@ -26,12 +26,13 @@ loss:
   # Note that "original acts" below refers to the activations in a model without SAEs
   sparsity:
     p_norm: 1.0  # p value in Lp norm
-    coeff: 4  # Multiplies the Lp norm in the loss (sparsity coefficient)
+    coeff: 4.0  # Multiplies the Lp norm in the loss (sparsity coefficient)
   in_to_orig: null  # Used for e2e+future recon. MSE between the input to the SAE and original acts
   out_to_orig: null  # Not commonly used. MSE between the output of the SAE and original acts
   out_to_in:
     coeff: 1.0  # Multiplies the MSE between the output and input of the SAE
-  logits_kl: null  # Multiplies the KL divergence between the logits of the SAE model and original model
+  logits_kl:
+    coeff: 0.0  # Multiplies the KL divergence between the logits of the SAE model and original model
 train_data:
   # See https://huggingface.co/apollo-research for other pre-tokenized datasets
   dataset_name: apollo-research/Skylion007-openwebtext-tokenizer-gpt2

@@ -1,7 +1,7 @@
 [project]
 name = "dictionary_learning"
 version = "2.1.1"
-description = "Repo for training sparse autoencoders end-to-end"
+description = "Repo for training variations of sparse autoencoder"
 requires-python = ">=3.11"
 readme = "README.md"
 dependencies = [
@@ -23,7 +23,10 @@ dependencies = [
     "umap-learn",
     "tenacity",
     "statsmodels",
-    "automated-interpretability"
+    "automated-interpretability",
+    "tabulate", 
+    "execnb",
+    "datasets",
 ]
 
 [project.urls]

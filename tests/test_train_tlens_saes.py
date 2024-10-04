@@ -2,15 +2,15 @@ from pathlib import Path
 
 import pytest
 
-from e2e_sae.data import DatasetConfig
-from e2e_sae.losses import (
+from dictionary_learning.data import DatasetConfig
+from dictionary_learning.losses import (
     LogitsKLLoss,
     LossConfigs,
     OutToInLoss,
     SparsityLoss,
 )
-from e2e_sae.scripts.train_tlens_saes.run_train_tlens_saes import Config, SAEsConfig
-from e2e_sae.scripts.train_tlens_saes.run_train_tlens_saes import main as run_training
+from dictionary_learning.scripts.train_tlens_saes.run_train_tlens_saes import Config, SAEsConfig
+from dictionary_learning.scripts.train_tlens_saes.run_train_tlens_saes import main as run_training
 
 
 @pytest.mark.cpuslow
@@ -21,7 +21,7 @@ def test_train_tiny_gpt():
     this.
     """
     model_path = Path(
-        "e2e_sae/scripts/train_tlens/sample_models/tiny-gpt2_lr-0.001_bs-16_2024-04-21_14-01-14/epoch_1.pt"
+        "dictionary_learning/scripts/train_tlens/sample_models/tiny-gpt2_lr-0.001_bs-16_2024-04-21_14-01-14/epoch_1.pt"
     )
     config = Config(
         wandb_project=None,

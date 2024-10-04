@@ -1,6 +1,6 @@
 import pytest
 
-from e2e_sae.utils import get_linear_lr_schedule
+from dictionary_learning.utils import get_linear_lr_schedule
 
 
 class TestLinearLRSchedule:

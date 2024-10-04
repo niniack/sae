@@ -1,7 +1,7 @@
 import pytest
 from torch import nn
 
-from e2e_sae.models.mlp import MLP, Layer
+from dictionary_learning.models.mlp import MLP, Layer
 
 
 @pytest.mark.parametrize(

@@ -2,11 +2,11 @@ from typing import Any
 
 import yaml
 
-from e2e_sae.scripts.train_tlens_saes.run_train_tlens_saes import Config
-from e2e_sae.settings import REPO_ROOT
-from e2e_sae.utils import replace_pydantic_model
+from dictionary_learning.scripts.train_tlens_saes.run_train_tlens_saes import Config
+from dictionary_learning.settings import REPO_ROOT
+from dictionary_learning.utils import replace_pydantic_model
 
-TINYSTORIES_CONFIG = f"{REPO_ROOT}/e2e_sae/scripts/train_tlens_saes/tinystories_1M_e2e.yaml"
+TINYSTORIES_CONFIG = f"{REPO_ROOT}/dictionary_learning/scripts/train_tlens_saes/tinystories_1M_e2e.yaml"
 
 
 def get_tinystories_config(*updates: dict[str, Any]) -> Config:

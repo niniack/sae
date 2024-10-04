@@ -1,8 +1,8 @@
 import pytest
 import torch
 
-from e2e_sae.loader import load_tlens_model
-from e2e_sae.models.transformers import SAETransformer
+from dictionary_learning.loader import load_tlens_model
+from dictionary_learning.models.transformers import SAETransformer
 from tests.utils import get_tinystories_config
 
 

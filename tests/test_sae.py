@@ -4,10 +4,10 @@ import pytest
 import torch
 from transformer_lens import HookedTransformer
 
-from e2e_sae.loader import load_pretrained_saes
-from e2e_sae.models.sparsifiers import SAE
-from e2e_sae.models.transformers import SAETransformer
-from e2e_sae.utils import save_module, set_seed
+from dictionary_learning.loader import load_pretrained_saes
+from dictionary_learning.models.sparsifiers import SAE
+from dictionary_learning.models.transformers import SAETransformer
+from dictionary_learning.utils import save_module, set_seed
 from tests.utils import get_tinystories_config
 
 

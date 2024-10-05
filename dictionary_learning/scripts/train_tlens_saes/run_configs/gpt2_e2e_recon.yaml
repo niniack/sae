@@ -1,5 +1,5 @@
-wandb_project: gpt2-e2e
-wandb_run_name: null # If not set, will use a name based on important config values
+wandb_project: koopman_sae
+wandb_run_name: null
 wandb_run_name_prefix: ""
 
 seed: 0
@@ -8,6 +8,7 @@ tlens_model_path: null
 
 n_samples: 400_000
 save_every_n_samples: null
+save_dir: /scratch/nsa325/koopman_sae
 eval_every_n_samples: 40_000
 eval_n_samples: 500
 log_every_n_grad_steps: 20

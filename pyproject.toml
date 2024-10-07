@@ -26,6 +26,7 @@ dependencies = [
     "automated-interpretability",
     "tabulate", 
     "execnb",
+    "rich",
     "datasets",
 ]
 
